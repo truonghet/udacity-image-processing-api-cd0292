@@ -23,11 +23,11 @@ describe('Test image processing via sharp', (): void => {
 
   // Note: Could also fail because of directory permissions
   it('succeeds to write resized thumb file (existing file, valid size values)', async (): Promise<void> => {
-    await File.createThumb({ filename: 'fjord', width: '99', height: '99' });
+    await File.createThumb({ filename: 'hettv', width: '99', height: '99' });
 
     const resizedImagePath: string = path.resolve(
       File.imagesThumbPath,
-      `fjord-99x99.jpg`
+      `hettv-99x99.jpg`
     );
     let errorFile: null | string = '';
 
@@ -46,7 +46,7 @@ describe('Test image processing via sharp', (): void => {
 afterAll(async (): Promise<void> => {
   const resizedImagePath: string = path.resolve(
     File.imagesThumbPath,
-    'fjord-99x99.jpg'
+    'hettv-99x99.jpg'
   );
 
   try {
